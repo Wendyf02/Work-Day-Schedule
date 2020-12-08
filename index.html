@@ -27,7 +27,7 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id= "currentDay" class="lead"></p>
-      <p id= "currentTime" class="lead"></p>
+     
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
@@ -58,7 +58,7 @@
   </div>
   <div class="input-group mb-3">
    <div class="input-group-prepend row">  
-     <span class="input-group-text hour">11:00 AM</span>
+     <span class="input-group-text hour"id="9">11:00 AM</span>
     </div>  
       <textarea id="input11am" value="" type="text" cols="100" rows="2"
       class="form-control description textarea"></textarea>
@@ -146,7 +146,11 @@
 
 
     
-       <script src="luxon.js"></script>
+      	
+
+
+     <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js" integrity="sha256-OVk2fwTRcXYlVFxr/ECXsakqelJbOg5WCj1dXSIb+nU=" crossorigin="anonymous"></script>
+    <script>luxon.DateTime.local();</script> 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

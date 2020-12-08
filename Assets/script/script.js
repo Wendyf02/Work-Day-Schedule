@@ -15,41 +15,50 @@
 // var currentTime = DateTime.local()
 // $("#currentTime").append(currentTime)
 
-
 let lead = document.getElementById('lead');
 lead.textContent = JSON.stringify(luxon.DATETIME_FULL);
 
-let DateTime = luxon.DateTime;
-let Today = DateTime.local()
-let f = { month: 'long' , day :'2-digit'};
-let m = today.get('month');
-let tz = today.zoneName;
-let newDt = today.set({month: 12});
-lead.textContent = today.tolocaleString();
-console.log(today.toISO());
+// let DateTime = luxon.DateTime;
+// let Today = DateTime.local()
+// let f = { month: 'long' , day :'2-digit'};
+// let m = today.get('month');
+// let tz = today.zoneName;
+// let newDt = today.set({month: 12});
+// lead.textContent = today.tolocaleString();
+// console.log(today.toISO());
 
 
 
 // function each hour is colorblock /time block is color coded indicating 
 //  -Past(Gray) Present (Red)  -Future(Green)
+var timeblock = $('hour');
+var now = DateTime.local();
 
-var now = DateTime.local().getHours();
+$.each(timeblock , function (hour) {
+  var hourId = parseInt($(this).attr("id"));
+  if (hourId === now) {
+      $(this).next.addClass("present");
+  } else if(hourId < now) {
+    $(this).next.addClass("past"); 
+} else if(hourId > now) {
+    $(this).next.addClass("future");
+}
 
-function timeblockcolor() {
-    if (now > 9) {
-        $("#input9am").addClass("past");
-    } else if (now >= 9 && now < 10) {
-        $("#input9am").addClass("present");
-    } else if (now < 9) {
-        $("#input9am").addClass("future");
-    {
-    if (now > 10) {
-        $("#input10am").addClass("past");
-    } else if (now >= 10 && now < 11) {
-        $("#input10am").addClass("present");
-    } else if (now < 9) {
-        $("#input10am").addClass("future");
-    }
+// function timeblockcolor() {
+//     if (now > 9) {
+//         $("#input9am").addClass("past");
+//     } else if (now >= 9 && now < 10) {
+//         $("#input9am").addClass("present");
+//     } else if (now < 9) {
+//         $("#input9am").addClass("future");
+//     {
+//     if (now > 10) {
+//         $("#input10am").addClass("past");
+//     } else if (now >= 10 && now < 11) {
+//         $("#input10am").addClass("present");
+//     } else if (now < 9) {
+//         $("#input10am").addClass("future");
+//     }
 
 
 
