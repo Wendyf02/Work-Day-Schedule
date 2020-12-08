@@ -1,5 +1,5 @@
 // //* variables///
-//  var input_texarea = document.querySelector("#input9am");
+//  var input_textarea = document.querySelector("#input9am");
 //  var output_div = document.querySelector("#input9am");
 //  var saveBtn = document.querySelector("#button9am");
 
@@ -9,59 +9,43 @@
 
 // Open Day Planner and Day and Time is Display at top
 
-// var currentDay = DateTime.local()
-// $("#currentDay").append(currentDay)
-
-// var currentTime = DateTime.local()
-// $("#currentTime").append(currentTime)
-
-let lead = document.getElementById('lead');
-lead.textContent = JSON.stringify(luxon.DATETIME_FULL);
-
-// let DateTime = luxon.DateTime;
-// let Today = DateTime.local()
-// let f = { month: 'long' , day :'2-digit'};
-// let m = today.get('month');
-// let tz = today.zoneName;
-// let newDt = today.set({month: 12});
-// lead.textContent = today.tolocaleString();
-// console.log(today.toISO());
+let currentDay = document.getElementById('currentDay');
+let DateTime = luxon.DateTime;
+let today = DateTime.local()
+let f = { month: 'long' , day :'2-digit'};
+let m = today.get('month');
+let tz = today.zoneName;
+currentDay.textContent = tz;
+let newDt = today.set({month: 12});
+currentDay.textContent = today.toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
+console.log(today.toISO());
 
 
 
 // function each hour is colorblock /time block is color coded indicating 
 //  -Past(Gray) Present (Red)  -Future(Green)
-var timeblock = $('hour');
-var now = DateTime.local();
+
+var timeblock = $(".hour");
+var now = DateTime.local().c.hour;
 
 $.each(timeblock , function (hour) {
   var hourId = parseInt($(this).attr("id"));
+    console.log(now,hourId)
   if (hourId === now) {
-      $(this).next.addClass("present");
+      $(this).addClass("present");
   } else if(hourId < now) {
-    $(this).next.addClass("past"); 
+    $(this).addClass("past"); 
 } else if(hourId > now) {
-    $(this).next.addClass("future");
+    $(this).addClass("future");
 }
 
-// function timeblockcolor() {
-//     if (now > 9) {
-//         $("#input9am").addClass("past");
-//     } else if (now >= 9 && now < 10) {
-//         $("#input9am").addClass("present");
-//     } else if (now < 9) {
-//         $("#input9am").addClass("future");
-//     {
-//     if (now > 10) {
-//         $("#input10am").addClass("past");
-//     } else if (now >= 10 && now < 11) {
-//         $("#input10am").addClass("present");
-//     } else if (now < 9) {
-//         $("#input10am").addClass("future");
-//     }
+});
 
 
-
+$(".saveBtn").on("click" , function(){
+    var hourclick = $(this).attr("id")
+    console.log($(this) [0].parentElement.previousElementSibling.value)
+})
 
 
 
@@ -70,35 +54,36 @@ $.each(timeblock , function (hour) {
 // Enter event -click save button for that insert time block.
 // Event  is sav e on local storage.
 
-       var input_textarea = document.querySelector("#input9am");
-       var output_div = document.querySelector("#input9am");
-       var saveBtn = document.querySelector("#button9am");
+        function hour() { 
+           var input_textarea = document.querySelector("#input9am");
+           var output_div = document.querySelector("#input9am");
+           var saveBtn = document.querySelector("#button9am");
 
-       saveBtn.addEventListener("click" , updateOutput);
+            saveBtn.addEventListener("click" , updateOutput);
      
-       output_div.textContent = localStorage.getItem("content");
-       input_textarea.value = localStorage.getItem("content");
+            output_div.textContent = localStorage.getItem("content");
+            input_textarea.value = localStorage.getItem("content");
 
-        updateOutput() 
-            localStorage.setItem("content" , input_extareaa.value);
+            function updateOutput() { 
+               localStorage.setItem("content" , input_extareaa.value);
 
-            output_div.textContent = input_textarea.value;
+                output_div.textContent = input_textarea.value;
+            }
         }
 
+        function hour() { 
+            var input_textarea2 = document.querySelector("#input10am");
+            var output_div2 = document.querySelector("#input10am");
+            var saveBtn2 = document.querySelector("#button10am");
 
-        var input_textarea = document.querySelector("#input10am");
-        var output_div = document.querySelector("#input10am");
-        var saveBtn = document.querySelector("#button10am");
-
-        saveBtn.addEventListener("click" , updateOutput2);
+            saveBtn2.addEventListener("click", updateOutput2);
      
-        output_div.textContent = localStorage.getItem("content2");
-        input_textarea.value = localStorage.getItem("content2");
+            output_div2.textContent = localStorage.getItem("content2");
+            input_textarea2.value = localStorage.getItem("content2");
 
-        updateOutput() 
-        localStorage.setItem("content" , input_textarea2.value);
+            function updateOutput2() { 
+                localStorage.setItem("content2", input_textarea2.value);
 
-        output_div.textContent = input_textarea2.value;
+                output_div2.textContent = input_textarea2.value;
+            }
         }
-
-
