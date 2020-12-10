@@ -19,21 +19,22 @@
    // function each hour is colorblock /time block is color coded indicating 
    //  -Past(Gray) Present (Red)  -Future(Green)
 
-   var timeblock = $(".hour");
-   var now = DateTime.local().c.hour;
+     var timeblock = $(".description");
+     var now = DateTime.local().c.hour;
+     
 
-    $.each(timeblock , function (hour) {
-    var hourId = parseInt($(this).attr("id"));
-    console.log(now,hourId)
-    if (hourId === now) {
+     $.each(timeblock , function (hour) {
+     var hourId = parseInt($(this).attr("hour"));
+     console.log(now,hourId)
+     if (hourId === now) {
        $(this).addClass("present");
     } else if(hourId < now) {
        $(this).addClass("past"); 
     } else if(hourId > now) {
     $(this).addClass("future");
-  }
+    }
 
-  });
+    });
 
 
    // function of Time block -click block.
@@ -43,13 +44,13 @@
 
   $(".saveBtn").on("click" , function(){
       var hourclick = $(this).attr("id").split("button")[1];
-      var userInput = ($(this)[0].parentElement.previousElementSibling.value);
+      var userInput = ($(this) [0].parentElement.previousElementSibling.value);
       localStorage.setItem(hourclick, userInput);
   })
  
           
 
-
+  
       $("#9am").val(localStorage.getItem("9am"));
       $("#10am").val(localStorage.getItem("10am"));
       $("#11am").val(localStorage.getItem("11am"));
