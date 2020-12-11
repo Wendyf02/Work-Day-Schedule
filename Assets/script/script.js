@@ -1,8 +1,9 @@
 
- $ (document).ready(function () {
+$ (document).ready(function () {
 
-     // Open Day Planner and Day and Time is Display at top
+   // Open Day Planner and Day and Time is Display at top
 
+   // Added current day and current time using Luxon.
     let currentDay = document.getElementById('currentDay');
     let DateTime = luxon.DateTime;
     let today = DateTime.local()
@@ -14,7 +15,7 @@
     currentDay.textContent = today.toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
     console.log(today.toISO());
 
-
+ 
 
    // function each hour is colorblock /time block is color coded indicating 
    //  -Past(Gray) Present (Red)  -Future(Green)
@@ -39,7 +40,7 @@
 
    // function of Time block -click block.
    // Enter event -click save button for that insert time block.
-   // Event  is sav e on local storage.
+   // Event  is save on local storage.
 
 
   $(".saveBtn").on("click" , function(){
@@ -49,7 +50,7 @@
   })
  
           
-
+    
   
       $("#9am").val(localStorage.getItem("9am"));
       $("#10am").val(localStorage.getItem("10am"));
