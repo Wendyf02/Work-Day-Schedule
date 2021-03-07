@@ -33,7 +33,7 @@
   Github: https://github.com/Wendyf02/Work-Day-Schedule  
   Email: cammomila444@gmail.com
   
-  Screenshot 
+  Screenshot    
  ![GitHub](assets/image/dayclndr.png)  
   
 
