@@ -1,15 +1,39 @@
-# Work-Day-Scheduler
+# Work-Day-Schedule
+  ## Table of Contents
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributors](#contributors)
+  * [Test](#test)
+  * [Questions](#questions)
+  
+  ## Description
+  A simple calendar application that allows the user to save events for events for each hour.
 
-A simple calendar application that allows the user to save events for events for each hour.
-This app will run in the browser and feuture in HTML and CSS done with jQuery and Luxon.
-Built With
-HTML
-CSS
-jQuery
+  ## Installation
+  HTML and CSS done with jQuery and Luxon.
 
 
-![GitHub](assets/image/dayclndr.png)
+  ## Usage
+  This app will run in the browser
 
+  ## Lincense
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+  ## Contributors
+  n/a
+
+  ## Test
+  
+  
+  ## Questions
+
+  Contact me:   
+  Github: https://github.com/Wendyf02/Work-Day-Schedule  
+  Email: cammomila444@gmail.com
+  
+  ![GitHub](assets/image/dayclndr.png)    
 
 Class Reference unit 5
 third-Party-APIs
@@ -25,6 +49,8 @@ https://api.jquery.com/parents/
 
 https://www.youtube.com/watch?v=aGXsNu3fItk
 
-LOCAL STORAGEHOW TO USE IN JAVASCRIPT
+LOCAL STORAGEHOW TO USE IN JAVASCRIPT     
 https://www.youtube.com/watch?v=k8yJCeuP6I8
 
+  
+  
