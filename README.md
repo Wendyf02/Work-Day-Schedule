@@ -33,24 +33,26 @@
   Github: https://github.com/Wendyf02/Work-Day-Schedule  
   Email: cammomila444@gmail.com
   
-  ![GitHub](assets/image/dayclndr.png)    
+  Screenshot 
+ ![GitHub](assets/image/dayclndr.png)  
+  
 
-Class Reference unit 5
-third-Party-APIs
-Activities- #17/18/19 and 20
+ Class Reference unit 5
+ third-Party-APIs
+ Activities- #17/18/19 and 20
 
-Source of Reference:
+ Source of Reference:
 
-https://getbootstrap.com/docs/4.5/components/input-group/
+ https://getbootstrap.com/docs/4.5/components/input-group/
 
-https://www.codesprogram.com/icons/Font-awesome-save-icon
+ https://www.codesprogram.com/icons/Font-awesome-save-icon
 
-https://api.jquery.com/parents/
+ https://api.jquery.com/parents/
 
 https://www.youtube.com/watch?v=aGXsNu3fItk
 
-LOCAL STORAGEHOW TO USE IN JAVASCRIPT     
-https://www.youtube.com/watch?v=k8yJCeuP6I8
+ LOCAL STORAGEHOW TO USE IN JAVASCRIPT     
+ https://www.youtube.com/watch?v=k8yJCeuP6I8
 
   
   
